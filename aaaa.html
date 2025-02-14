@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily News</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            transition: top 0.3s;
+            z-index: 1000;
+        }
+        .navbar {
+            background-color: #444;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            width: 100%;
+            position: relative;
+            transition: position 0.3s;
+        }
+        .sticky {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 999;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding-top: 120px;
+        }
+        .news-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .news-article {
+            background: white;
+            padding: 20px;
+            margin: 10px;
+            width: 30%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .news-article img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+        @media (max-width: 768px) {
+            .news-article {
+                width: 100%;
+            }
+        }
+    </style>
+    <!-- <script>
+        let prevScrollPos = window.pageYOffset;
+        let navbar = document.querySelector(".navbar");
+        let header = document.querySelector(".header");
+        let navbarOffset = navbar.offsetTop;
+
+        window.onscroll = function() {
+            let currentScrollPos = window.pageYOffset;
+            
+            if (prevScrollPos > currentScrollPos) {
+                header.style.top = "0";
+            } else {
+                header.style.top = "-60px";
+            }
+            
+            if (window.pageYOffset >= navbarOffset) {
+                navbar.classList.add("sticky");
+            } else {
+                navbar.classList.remove("sticky");
+            }
+            
+            prevScrollPos = currentScrollPos;
+        };
+    </script> -->
+</head>
+<body>
+    <div class="header">
+        <h1>Daily News</h1>
+    </div>
+    <div class="navbar">
+        <p>Home | World | Business | Technology | Sports | Entertainment</p>
+    </div>
+    <div class="container">
+        <div class="news-section">
+            <div class="news-article">
+                <img src="first_image.jpg" alt="News Image 1">
+                <h2>Article Title 1</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <div class="news-article">
+                <img src="second_image.jpg" alt="News Image 2">
+                <h2>Article Title 2</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <div class="news-article">
+                <img src="third_image.jpeg" alt="News Image 3">
+                <h2>Article Title 3</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p>&copy; 2025 Daily News. All rights reserved.</p>
+    </div>
+</body>
+</html>
